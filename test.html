@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .div, .div2 {
+        display: none;
+    }
+</style>
+<body>
+    <button id="sign">Đăng nhập</button>
+    <div class="div">
+        <label for="name">Tên tài khoản</label>
+        <input type="text" id="nameInput1">
+        <label for="pass">Mật khẩu</label>
+        <input type="password" id="passInput1">
+        <button id="btn1">Đăng nhập</button>
+    </div>
+    <button id="create">Đăng kí</button>
+    <div class="div2">
+        <label for="name">Tên tài khoản</label>
+        <input type="text" id="nameInput2">
+        <label for="pass">Mật khẩu</label>
+        <input type="password" id="passInput2">
+        <button id="btn2">Đăng kí</button>
+    </div>
+    <script>
+        let sign = document.getElementById("sign");
+        let create = document.getElementById("create");
+        let btn1 = document.getElementById("btn1");
+        let btn2 = document.getElementById("btn2");
+        let nameInput1 = document.getElementById("nameInput1");
+        let passInput1 = document.getElementById("passInput1");
+        let nameInput2 = document.getElementById("nameInput2");
+        let passInput2 = document.getElementById("passInput2");
+        let div = document.querySelector(".div");
+        let div2 = document.querySelector(".div2");
+
+        sign.onclick = function () {
+            div.style.display = "block";
+            sign.style.display = "none";
+        };
+
+        create.onclick = function () {
+            create.style.display = "none";
+            div2.style.display = "block";
+        };
+
+        btn1.onclick = function () {
+            let name = nameInput1.value;
+            let pass = passInput1.value;
+
+            if (localStorage.getItem(name)) {
+                alert("Tài khoản đã được đăng nhập");
+                sign.style.display = "block";
+                div.style.display = "none";
+            } else {
+                alert("Tài khoản không tồn tại");
+                sign.style.display = "block";
+                div.style.display = "none";
+            }
+            nameInput1.value = "";
+            passInput1.value = "";
+        };
+
+        btn2.onclick = function () {
+            let name = nameInput2.value;
+            let pass = passInput2.value;
+
+            if (localStorage.getItem(name)) {
+                alert("Tài khoản đã tồn tại");
+                create.style.display = "block";
+                div2.style.display = "none";
+            } else {
+                alert("Tài khoản đã được khởi tạo");
+                create.style.display = "block";
+                div2.style.display = "none";
+                let user = {
+                    name: name,
+                    pass: pass,
+                };
+                let json = JSON.stringify(user);
+                localStorage.setItem(name, json);
+                nameInput2.value = "";
+                passInput2.value = "";
+            }
+        };
+    </script>
+</body>
+</html>

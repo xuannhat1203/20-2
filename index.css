@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.infor{
+    width: 100%;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    gap: 50px;
+    justify-content:end;
+    align-items: center;
+}
+.banner{
+    display: flex;
+    justify-content: space-around;
+    height: 150px;
+    width: 100%;
+    background-color: whitesmoke;
+    align-items: center;
+}
+.infor2, .infor3 {
+    display: flex;
+}
+.infor3{
+    gap: 30px;
+}
+.infor3 h1{
+    position: relative;
+    top: 20px;
+}
+.banner ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    list-style-type: none;
+}
+.item{
+    width: 150px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menu{
+    display: flex;
+    width: 100%;
+    height: 120px;
+    justify-content: center;
+    gap: 15px;
+}
+.line{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.line1{
+    background-color: gray;
+    width: 1150px;
+    height: 3px;
+}
+.adv{
+    width: 1150px;
+    height: 500px;
+    border: 1px solid black;
+    display: flex;
+    gap: 1000px;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./Cgv_logo.webp);
+    background-size: cover;
+}
+.under{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+}
+.home-title {
+    height: 60px;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+}
+#movie{
+    font-size: 50px;
+    z-index: -1;
+}
+.list{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.list ul{
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+.news ul{
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+.event{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+footer{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+footer ul{
+    list-style-type: none;
+}
+.img{
+    display: flex;
+    gap: 20px;
+}
+.div, .div2 {
+    display: none;
+}
+.arr{
+    position: relative;
+    top: 450px;
+    right: 600px;
+}
+#img1,#img2,#img3,#img4,#img5{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+}
+
